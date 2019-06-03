@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
-import { format, subDays, isSameMinute } from 'date-fns';
+import { format, addDays, subDays, isSameMinute } from 'date-fns';
 import { toHijri } from 'hijri-date/lib/safe';
 import { setInterval, clearInterval } from 'requestanimationframe-timer';
 
@@ -104,16 +104,11 @@ export default class App extends Component {
     // NOTE: ramadanOffset only needs to be set in case toHijri calculation
     // isn't correct and needs to be overridden
     const ramadanOffset = subDays(this.state.currentDateAndTime, 1);
-    const islamicDate = toHijri(ramadanOffset).format('dS mmmm yyyy', {
+    let islamicDate = toHijri(ramadanOffset).format('dS mmmm yyyy', {
       locale: 'en'
     });
     const islamicDay = toHijri(ramadanOffset).format('d');
     const gregorianDate = format(this.state.currentDateAndTime, 'Do MMMM YYYY');
-
-    // NOTE: Due to the nature of how Eid is determined irl
-    // this will probably require being manually set at some point
-    const isEid = islamicDate.indexOf('Ramadan') === -1;
-    if (isEid) return <EidCard />;
 
     const locationTimes = fastingTimes[this.state.selectedLocation];
 
@@ -121,13 +116,23 @@ export default class App extends Component {
     let endTime = locationTimes[islamicDay].endTime;
 
     // Show next fast info if current has ended
+    // and update Islamic date post Magrib
     if (fastHasEnded(this.state.currentDateAndTime, endTime)) {
+      const postMagribOffset = addDays(this.state.currentDateAndTime, 1);
+      islamicDate = toHijri(postMagribOffset).format('dS mmmm yyyy', {
+        locale: 'en'
+      });
       const nextDay = parseInt(islamicDay) + 1;
       startTime = locationTimes[nextDay].startTime;
       endTime = locationTimes[nextDay].endTime;
     }
 
     const started = fastHasStarted(this.state.currentDateAndTime, startTime);
+
+    // NOTE: Due to the nature of how Eid is determined irl
+    // this will probably require being manually set at some point
+    const isEid = islamicDate.indexOf('Ramadan') === -1;
+    if (isEid) return <EidCard />;
 
     return (
       <AppContainer variant={CONTAINER_VARIANTS.HOMESCREEN}>
