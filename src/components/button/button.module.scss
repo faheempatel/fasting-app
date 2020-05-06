@@ -1,7 +1,4 @@
-import { h } from 'preact';
-import styled from 'preact-emotion';
-
-const Button = styled('button')`
+.button {
   width: 100%;
   height: 64px;
   margin-top: 24px;
@@ -15,15 +12,11 @@ const Button = styled('button')`
   color: var(--white);
   font-weight: 700;
 
-  :hover {
+  &:hover {
     cursor: pointer;
   }
 
   > * {
     line-height: 0;
   }
-`;
-
-export default ({ children, onClick }) => (
-  <Button onClick={onClick}>{children}</Button>
-);
+}

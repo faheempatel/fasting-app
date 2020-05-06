@@ -23,7 +23,7 @@ import Container from '../components/Container';
 import NavBar, { NavBarWithLocationMenu } from '../components/NavBar';
 import TimeRing from '../components/TimeRing';
 import InfoRow from '../components/InfoRow';
-import Button from '../components/Button';
+import Button from '../components/button/button.jsx';
 import Footer from '../components/Footer';
 import EidCard from '../components/EidCard';
 import LocationMenu from '../components/LocationMenu';
