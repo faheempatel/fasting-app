@@ -8,8 +8,8 @@ export default ({ fastHasStarted }) => {
     [styles.red]: fastHasStarted
   });
   return (
-    <div className={styles.container}>
-      <div className={indicatorStyles} />
+    <div class={styles.container}>
+      <div class={indicatorStyles} />
       <h3>{fastHasStarted ? 'CAN’T EAT' : 'CAN EAT'}</h3>
     </div>
   );
