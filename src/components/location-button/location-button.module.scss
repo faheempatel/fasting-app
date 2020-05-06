@@ -1,0 +1,18 @@
+.button {
+  margin-left: -15px;
+  outline: 0;
+  border: 3px solid var(--light-grey);
+  border-radius: 100px;
+  padding: 9px 22px;
+  background: var(--white);
+
+  p {
+    color: var(--grey);
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+}

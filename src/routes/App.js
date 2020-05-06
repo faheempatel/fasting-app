@@ -28,7 +28,7 @@ import Footer from '../components/footer/footer.jsx';
 import EidCard from '../components/EidCard';
 import LocationMenu from '../components/LocationMenu';
 import TimeLabel from '../components/time-label/time-label.jsx';
-import LocationButton from '../components/LocationButton';
+import LocationButton from '../components/location-button/location-button.jsx';
 import EatStatus from '../components/eat-status/eat-status.jsx';
 import IftarMessage from '../components/iftar-message/iftar-message.jsx';
 
