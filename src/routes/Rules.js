@@ -15,7 +15,7 @@ const Heading = styled('h2')`
 `;
 
 const GreenHeading = styled(Heading)`
-  color: #7dbc4b;
+  color: var(--green);
 `;
 const RedHeading = styled(Heading)`
   color: #f63433;
