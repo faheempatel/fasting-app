@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import styled from 'preact-emotion';
 
-import { NAV_BAR_VARIANTS } from './variants';
+import { NAV_BAR_VARIANTS } from './app-container/variants';
 import mapPinIcon from '../assets/icons/map-pin.svg';
 
 const NavBarContainer = styled('nav')`

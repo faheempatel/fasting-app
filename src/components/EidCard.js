@@ -2,7 +2,7 @@ import { h } from 'preact';
 import styled from 'preact-emotion';
 
 import partyPopperEmoji from '../assets/party-popper-emoji.png';
-import Container from './Container';
+import AppContainer from './app-container/app-container';
 
 const InnerContainer = styled('div')`
   display: flex;
@@ -51,7 +51,7 @@ const InnerContainer = styled('div')`
 `;
 
 const EidCard = () => (
-  <Container>
+  <AppContainer>
     <InnerContainer>
       <h1>Eid Mubarak!</h1>
       <img class="emoji" src={partyPopperEmoji} alt="" />
@@ -76,7 +76,7 @@ const EidCard = () => (
         </p>
       </div>
     </InnerContainer>
-  </Container>
+  </AppContainer>
 );
 
 export default EidCard;

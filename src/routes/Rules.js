@@ -3,9 +3,9 @@ import styled from 'preact-emotion';
 import { route } from 'preact-router';
 
 import backIcon from '../assets/icons/back.svg';
-import { CONTAINER_VARIANTS } from '../components/variants';
+import { CONTAINER_VARIANTS } from '../components/app-container/variants';
 
-import Container from '../components/Container';
+import AppContainer from '../components/app-container/app-container';
 import NavBar from '../components/NavBar';
 
 const Heading = styled('h2')`
@@ -99,7 +99,7 @@ export default () => {
   );
 
   return (
-    <Container variants={CONTAINER_VARIANTS.SCROLL}>
+    <AppContainer variants={CONTAINER_VARIANTS.SCROLLABLE}>
       <NavBar
         title={'Fasting Rules'}
         icon={backIcon}
@@ -119,6 +119,6 @@ export default () => {
 
       <RedHeading>Things that break our fast</RedHeading>
       {renderList(rules.disallowed)}
-    </Container>
+    </AppContainer>
   );
 };

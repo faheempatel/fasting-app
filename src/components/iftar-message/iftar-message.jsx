@@ -1,13 +1,13 @@
 import { h } from 'preact';
 
-import Container from '../Container';
-import { CONTAINER_VARIANTS } from '../variants';
+import AppContainer from '../app-container/app-container';
+import { CONTAINER_VARIANTS } from '../app-container/variants';
 import styles from './iftar-message.module.scss';
 
 export default () => (
-  <Container variant={CONTAINER_VARIANTS.IFTAR_SCREEN}>
+  <AppContainer variant={CONTAINER_VARIANTS.SHORT}>
     <div class={styles.innerContainer}>
       <h1>Time to break your fast</h1>
     </div>
-  </Container>
+  </AppContainer>
 );
