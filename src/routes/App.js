@@ -30,7 +30,7 @@ import LocationMenu from '../components/LocationMenu';
 import TimeLabel from '../components/time-label/time-label.jsx';
 import LocationButton from '../components/LocationButton';
 import EatStatus from '../components/eat-status/eat-status.jsx';
-import IftarMessage from '../components/IftarMessage';
+import IftarMessage from '../components/iftar-message/iftar-message.jsx';
 
 if (module.hot) {
   require('preact/debug');
