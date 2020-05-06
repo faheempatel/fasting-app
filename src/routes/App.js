@@ -29,7 +29,7 @@ import EidCard from '../components/EidCard';
 import LocationMenu from '../components/LocationMenu';
 import TimeLabel from '../components/TimeLabel';
 import LocationButton from '../components/LocationButton';
-import EatStatus from '../components/EatStatus';
+import EatStatus from '../components/eat-status/eat-status.jsx';
 import IftarMessage from '../components/IftarMessage';
 
 if (module.hot) {
