@@ -14,7 +14,7 @@ import {
 } from '../utils';
 import screenMachine, {
   IFTAR_DURATION_IN_MS
-} from '../state_machines/screenMachine';
+} from '../state-machines/screen-machine';
 
 import fastingTimes from '../times.json';
 import { CONTAINER_VARIANTS } from '../components/variants';
