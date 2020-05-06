@@ -25,7 +25,7 @@ import TimeRing from '../components/TimeRing';
 import InfoRow from '../components/InfoRow';
 import Button from '../components/button/button.jsx';
 import Footer from '../components/footer/footer.jsx';
-import EidCard from '../components/EidCard';
+import EidCard from '../components/eid-card/eid-card.jsx';
 import LocationMenu from '../components/LocationMenu';
 import TimeLabel from '../components/time-label/time-label.jsx';
 import LocationButton from '../components/location-button/location-button.jsx';
