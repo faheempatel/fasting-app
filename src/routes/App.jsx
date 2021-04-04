@@ -1,5 +1,5 @@
-import { h, Component } from 'preact';
-import styled from 'preact-emotion';
+import { Component } from 'preact';
+import styled from '@emotion/styled';
 import { route } from 'preact-router';
 import { interpret } from 'xstate';
 import { format, subDays, isSameMinute } from 'date-fns';
@@ -31,10 +31,6 @@ import TimeLabel from '../components/TimeLabel';
 import LocationButton from '../components/LocationButton';
 import EatStatus from '../components/EatStatus';
 import IftarMessage from '../components/IftarMessage';
-
-if (module.hot) {
-  require('preact/debug');
-}
 
 const LOCATION_LS_KEY = 'selectedLocation';
 const DEFAULT_LOCATION = '1';

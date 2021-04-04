@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import styled from 'preact-emotion';
+import styled from '@emotion/styled';
 
 const Footer = styled('div')`
   p {

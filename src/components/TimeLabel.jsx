@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import styled from 'preact-emotion';
+import styled from '@emotion/styled';
 
 const Label = styled('p')`
   font-weight: 700;

@@ -1,10 +1,10 @@
-import { h } from 'preact';
+import { render } from 'preact';
 import Router from 'preact-router';
 
 import './styles/global.css';
 
 import App from './routes/App';
-import Rules from 'async!./routes/Rules';
+import Rules from './routes/Rules';
 
 const Main = () => (
   <Router>
@@ -13,4 +13,4 @@ const Main = () => (
   </Router>
 );
 
-export default Main;
+render(<Main />, document.getElementById('app'));

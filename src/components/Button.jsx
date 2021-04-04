@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import styled from 'preact-emotion';
+import styled from '@emotion/styled';
 
 const Button = styled('button')`
   width: 100%;
@@ -14,6 +13,10 @@ const Button = styled('button')`
   background-color: var(--black);
   color: var(--white);
   font-weight: 700;
+
+  p {
+    color: var(--white);
+  }
 
   :hover {
     cursor: pointer;

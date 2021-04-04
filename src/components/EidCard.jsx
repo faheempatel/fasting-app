@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import styled from 'preact-emotion';
+import styled from '@emotion/styled';
 
 import partyPopperEmoji from '../assets/party-popper-emoji.png';
 import Container from './Container';

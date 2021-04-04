@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import styled from 'preact-emotion';
+import styled from '@emotion/styled';
 import { route } from 'preact-router';
 
 import backIcon from '../assets/icons/back.svg';
